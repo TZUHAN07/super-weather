@@ -1,7 +1,90 @@
-#raining{}
-#raining>.location{
-	border-bottom:1px solid #000000;
+body {
+	/* background-image: url("./imgs/canvas.png"); */
+	/* width: 100%;
+	height: 100%; */
+	background: linear-gradient(to bottom, #ba8585, #cc5d5d);
+	height: 100vh;
 }
-#raining>.location>.town{
-	font-weight:bold;
+
+.header {
+	width: 90%;
+	height: 60px;
+	margin: 0 auto;
+}
+
+.title {
+	text-align: center;
+	font-size: 2rem;
+	letter-spacing: 5px;
+}
+
+.mainContent {
+	display: flex;
+	gap: 20px;
+}
+
+.baseballFieldMap {
+	width: 40%;
+	background-color: #fff;
+	height: 80vh;
+}
+
+.baseballFieldMap::after {
+	content: "地圖地圖地圖";
+	font-size: 150px;
+	color: #000000;
+}
+
+.title {
+	/* font-size: 48px;
+	font-weight: 700; */
+	margin: 0 auto;
+}
+
+.rightWrapper {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.temperatureCurve {
+	height: calc(100vh - 60px - 430px);
+}
+
+.temperatureCurve::after {
+	content: "折線圖折線圖折線圖折線圖折線圖折線圖折線圖";
+	font-size: 90px;
+	color: #000000;
+}
+
+.baseballFieldMenu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+}
+
+.baseballField {
+	width: 20%;
+	height: 55px;
+	/* background-color: #414141; */
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	outline: 1px solid #cbcbcb;
+	border-radius: 40px;
+	transition: border-radius 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+		color 0.4s
+		/* scale 4s ease-in-out; */
+
+}
+
+.baseballField:hover {
+	cursor: pointer;
+	border-radius: 15px;
+	color: #dddddd;
+	/* transform: scale(1.02); */
 }

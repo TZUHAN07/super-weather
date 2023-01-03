@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,23 +11,35 @@
 	<!-- 建立雨量觀測部份的樣式 -->
 	<link rel="stylesheet" type="text/css" href="css/raining.css" />
 </head>
-<body>
-	<!-- 美化雨量觀測顯示、資料處理或建立資料分頁功能 -->
-	<h3>雨量觀測</h3>
-	<div id="raining"></div>
 
-	<!--
-		完成各縣市氣象預報功能
-		請使用中央氣象局公開 API 的第一個資料集 (/v1/rest/datastore/F-C0032-001)
-		https://opendata.cwb.gov.tw/dist/opendata-swagger.html?urls.primaryName=openAPI#/
-	-->
-	<h3>各縣市最新氣象預報 ( 文字描述、低溫、高溫 )</h3>
-	<div id="weather"></div>
-	<script>
-		// 以下是我申請的 KEY 請使用無所謂，你也可以自己去中央氣象局網站申請一個
-		// https://opendata.cwb.gov.tw/index
-		const CWB_API_KEY="CWB-25142137-EFE4-4F9E-9B46-D41BF5BD73D5";
-	</script>
-	<script src="js/raining.js"></script>
+<body>
+
+	<div class="header">
+		<div class="title">棒球場天氣預報</div>
+	</div>
+	<div class="mainContent">
+		<div class="baseballFieldMap"></div>
+		<div class="rightWrapper">
+			<div class="temperatureCurve"></div>
+			<div class="baseballFieldMenu">
+				<div class="baseballField">天母棒球場</div>
+				<div class="baseballField">新莊棒球場</div>
+				<div class="baseballField">桃園國際棒球場</div>
+				<div class="baseballField">新竹棒球場</div>
+				<div class="baseballField">臺中洲際棒球場</div>
+				<div class="baseballField">臺中國立體大棒球場</div>
+				<div class="baseballField">雲林斗六棒球場</div>
+				<div class="baseballField">嘉義市立棒球場</div>
+				<div class="baseballField">臺南市立棒球場</div>
+				<div class="baseballField">高雄立德棒球場</div>
+				<div class="baseballField">澄清湖棒球場</div>
+				<div class="baseballField">中國信託公益園區棒球場</div>
+				<div class="baseballField">屏東縣立棒球場</div>
+				<div class="baseballField">宜蘭羅東運動公園棒球場</div>
+				<div class="baseballField">花蓮縣立棒球場</div>
+				<div class="baseballField">臺東縣立棒球場</div>
+			</div>
+		</div>
 </body>
+
 </html>
