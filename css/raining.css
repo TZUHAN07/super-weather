@@ -23,17 +23,6 @@ body {
 	gap: 20px;
 }
 
-.baseballFieldMap {
-	width: 40%;
-	background-color: #fff;
-	height: 80vh;
-}
-
-.baseballFieldMap::after {
-	content: "地圖地圖地圖";
-	font-size: 150px;
-	color: #000000;
-}
 
 .title {
 	/* font-size: 48px;
@@ -41,6 +30,53 @@ body {
 	margin: 0 auto;
 }
 
+/* =========================== Map ================================ */
+.baseballFieldMap {
+	width: 40%;
+	/* background-color: #fff; */
+	/* height: 80vh; */
+}
+
+
+#cf503461-00bd-459a-aeb5-062ebc913211 {
+	fill: #FFBF78;
+	height: 800px;
+	stroke: #ffffff3d;
+}
+
+path:hover {
+	fill: #FEA493;
+	cursor: pointer;
+	transform: scale(1.005);
+
+}
+
+text {
+	display: none;
+	font-size: 16px;
+	font-weight: 100;
+	stroke: #ffffff;
+	/* box-shadow: 16px 18px 22px -4px rgba(0, 0, 0, 0.39); */
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.17)
+}
+
+/* path:hover text {
+	display: inline-block;
+} */
+
+
+text:hover {
+	cursor: pointer;
+	/* transform: scale(1.01); */
+}
+
+[data-name="kaohsiung_city"]:hover text {
+	display: block;
+	fill: #ffffff;
+}
+
+
+/* =========================== Right ================================ */
 .rightWrapper {
 	width: 60%;
 	display: flex;
@@ -48,6 +84,7 @@ body {
 	gap: 20px;
 }
 
+/* =========================== temperatureCurve ================================ */
 .temperatureCurve {
 	height: calc(100vh - 60px - 430px);
 }
@@ -57,6 +94,9 @@ body {
 	font-size: 90px;
 	color: #000000;
 }
+
+
+/* =========================== baseballFieldMenu ================================ */
 
 .baseballFieldMenu {
 	display: flex;
