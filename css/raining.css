@@ -38,14 +38,22 @@ body {
 .baseballFieldMap {
 	width: 40%;
 	/* height: 80vh; */
+	position: relative;
+	height: auto;
 }
 
+.baseballFieldName {
+	position: static;
+}
 
 #cf503461-00bd-459a-aeb5-062ebc913211 {
 	fill: #FFBF78;
-	height: 735px;
+	/* height: 800px; */
 	stroke: #ffffff3d;
+	height: 100%;
+	width: 100%;
 }
+
 
 path:hover {
 	fill: #FEA493;
