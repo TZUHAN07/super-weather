@@ -1,0 +1,126 @@
+.show{
+    display:block
+}	
+.baseStyle{
+    display:none;
+    color:#6b6c6e;
+    position:absolute;
+    padding:5px;
+    border-radius: 5px;
+    font-size: 14px;
+    background:white;
+    opacity:0.6
+}
+.fieldNameText_taipei{
+    top: 10%;
+    left: 80%;
+}
+.fieldNameText_newtaipei{
+    top: 15%;
+    left: 75%;
+}
+
+.fieldNameText_taoyuan{
+    top: 14%;
+    left: 65%;
+}
+.fieldNameText_hsinchu{
+    top: 18%;
+    left: 58%;
+}
+
+.fieldNameText_taichung{
+    display:none;
+    position:absolute;
+    top: 36%;
+    left: 55%;
+}
+.fieldNameText_taichungFirst{
+    padding:5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity:0.6;
+    color:#6b6c6e;
+    background:white;
+    margin-bottom:5px;
+}
+.fieldNameText_taichungCollege{
+    padding:5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity:0.6;
+    color:#6b6c6e;
+    background:white;
+}
+.fieldNameText_yunlin{
+    top: 46%;
+    left: 40%;
+}
+.fieldNameText_chiayi{
+    top: 52%;
+    left: 40%;
+}
+.fieldNameText_tainan{
+    top: 62%;
+    left: 40%;
+}
+.fieldNameText_kaohsiung{
+    display:none;
+    position:absolute;
+    top: 68%;
+    left: 44%;
+}
+.fieldNameText_kaohsiungFirst{
+    padding:5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity:0.6;
+    color:#6b6c6e;
+    background:white;
+    margin-bottom:5px;
+}
+.fieldNameText_kaohsiungLake{
+    padding:5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity:0.6;
+    color:#6b6c6e;
+    background:white;
+}
+.fieldNameText_pingtung{
+    display:none;
+    position:absolute;
+    top: 78%;
+    left: 48%;
+}
+.fieldNameText_pingtungFirst{
+    padding:5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity:0.6;
+    background:white;
+    color:#6b6c6e;
+    margin-top:5px;
+}
+.fieldNameText_pingtungChina{
+    padding:5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity:0.6;
+    background:white;
+    color:#6b6c6e;
+   
+}
+.fieldNameText_yilan{
+    top: 25%;
+    left: 78%;
+}
+.fieldNameText_hualien{
+    top: 50%;
+    left: 70%;
+}
+.fieldNameText_taitung{
+    top: 65%;
+    left: 60%;
+    
+}
