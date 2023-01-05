@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/common.css" />
 	<link rel="stylesheet" type="text/css" href="css/raining.css" />
 	<link rel="stylesheet" type="text/css" href="css/field.css" />
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -250,7 +251,9 @@
 			</svg>
 		</div>
 		<div class="rightWrapper">
-			<div class="temperatureCurve"></div>
+			<div class="temperatureCurve">
+				<canvas id="myChart" width="500" height="200"></canvas>
+			</div>
 			<div class="baseballFieldMenu">
 				<div class="baseballField">天母棒球場</div>
 				<div class="baseballField">新莊棒球場</div>
@@ -273,6 +276,8 @@
 	</div>
 	<script type="text/javascript" src="/js/map.js"></script>
 	<script type="text/javascript" src="js/field.js"></script>
+	<script src="/js/api.js"></script>
+	<script src="/js/chart.js"></script>
 </body>
 
 </html>

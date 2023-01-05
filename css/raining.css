@@ -29,8 +29,6 @@ body {
 
 
 .title {
-	/* font-size: 48px;
-	font-weight: 700; */
 	margin: 0 auto;
 }
 
@@ -86,18 +84,14 @@ text {
 
 /* =========================== temperatureCurve ================================ */
 .temperatureCurve {
-	height: calc(100vh - 60px - 430px);
+	/* height: calc(100vh - 60px - 430px); */
 	width: 100%;
-	border-radius: 15px;
-	outline: 1px solid #cbcbcb;
+	/* border-radius: 15px;
+	outline: 1px solid #cbcbcb; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-
-.temperatureCurve::after {
-	content: "折線圖折線圖折線圖折線圖折線圖折線圖折線圖";
-	font-size: 90px;
-	color: #000000;
-}
-
 
 /* =========================== baseballFieldMenu ================================ */
 
