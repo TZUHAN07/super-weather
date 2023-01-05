@@ -184,6 +184,7 @@ document.querySelector('[data-name="penghu_country"]').addEventListener('mouseou
     penghu.style.display = 'none';
 });
 
+// fieldNameText of map
 const fieldNameText_taipei = document.querySelector("#fieldNameText_taipei")
 const fieldNameText_newtaipei = document.querySelector("#fieldNameText_newtaipei")
 const fieldNameText_taoyuan = document.querySelector("#fieldNameText_taoyuan")
@@ -200,52 +201,117 @@ const fieldNameText_pingtungFirst = document.querySelector("#fieldNameText_pingt
 const fieldNameText_yilan = document.querySelector("#fieldNameText_yilan")
 const fieldNameText_hualien = document.querySelector("#fieldNameText_hualien")
 const fieldNameText_taitung = document.querySelector("#fieldNameText_taitung")
+// fieldNameText of baseballFieldMenu
+const fieldNameTextTaipei = document.querySelector("#fieldNameTextTaipei")
+const fieldNameTextNewtaipei = document.querySelector("#fieldNameTextNewtaipei")
+const fieldNameTextTaoyuan = document.querySelector("#fieldNameTextTaoyuan")
+const fieldNameTextHsinchu = document.querySelector("#fieldNameTextHsinchu")
+const fieldNameTextTaichungFirst = document.querySelector("#fieldNameTextTaichungFirst")
+const fieldNameTextTaichungCollege = document.querySelector("#fieldNameTextTaichungCollege")
+const fieldNameTextYunlin = document.querySelector("#fieldNameTextYunlin")
+const fieldNameTextChiayi = document.querySelector("#fieldNameTextChiayi")
+const fieldNameTextTainan = document.querySelector("#fieldNameTextTainan")
+const fieldNameTextKaohsiungFirst = document.querySelector("#fieldNameTextKaohsiungFirst")
+const fieldNameTextKaohsiungLake = document.querySelector("#fieldNameTextKaohsiungLake")
+const fieldNameTextPingtungChina = document.querySelector("#fieldNameTextPingtungChina")
+const fieldNameTextPingtungFirst = document.querySelector("#fieldNameTextPingtungFirst")
+const fieldNameTextYilan = document.querySelector("#fieldNameTextYilan")
+const fieldNameTextHualien = document.querySelector("#fieldNameTextHualien")
+const fieldNameTextTaitung = document.querySelector("#fieldNameTextTaitung")
 
 fieldNameText_taipei.addEventListener('click', () => {
+    document.title="天母棒球場⛅ | 超級氣象局"
+})
+fieldNameTextTaipei.addEventListener('click', () => {
     document.title="天母棒球場⛅ | 超級氣象局"
 })
 fieldNameText_newtaipei.addEventListener('click', () => {
     document.title="新莊棒球場⛅ | 超級氣象局"
 })
+fieldNameTextNewtaipei.addEventListener('click', () => {
+    document.title="新莊棒球場⛅ | 超級氣象局"
+})
 fieldNameText_taoyuan.addEventListener('click', () => {
+    document.title="桃園國際棒球場⛅ | 超級氣象局"
+})
+fieldNameTextTaoyuan.addEventListener('click', () => {
     document.title="桃園國際棒球場⛅ | 超級氣象局"
 })
 fieldNameText_hsinchu.addEventListener('click', () => {
     document.title="新竹棒球場⛅ | 超級氣象局"
 })
+fieldNameTextHsinchu.addEventListener('click', () => {
+    document.title="新竹棒球場⛅ | 超級氣象局"
+})
 fieldNameText_taichungFirst.addEventListener('click', () => {
+    document.title="臺中洲際棒球場⛅ | 超級氣象局"
+})
+fieldNameTextTaichungFirst.addEventListener('click', () => {
     document.title="臺中洲際棒球場⛅ | 超級氣象局"
 })
 fieldNameText_taichungCollege.addEventListener('click', () => {
     document.title="臺中國立體大棒球場⛅ | 超級氣象局"
 })
+fieldNameTextTaichungCollege.addEventListener('click', () => {
+    document.title="臺中國立體大棒球場⛅ | 超級氣象局"
+})
 fieldNameText_yunlin.addEventListener('click', () => {
+    document.title="雲林斗六棒球場⛅ | 超級氣象局"
+})
+fieldNameTextYunlin.addEventListener('click', () => {
     document.title="雲林斗六棒球場⛅ | 超級氣象局"
 })
 fieldNameText_chiayi.addEventListener('click', () => {
     document.title="嘉義市立棒球場⛅ | 超級氣象局"
 })
+fieldNameTextChiayi.addEventListener('click', () => {
+    document.title="嘉義市立棒球場⛅ | 超級氣象局"
+})
 fieldNameText_tainan.addEventListener('click', () => {
+    document.title="臺南市立棒球場⛅ | 超級氣象局"
+})
+fieldNameTextTainan.addEventListener('click', () => {
     document.title="臺南市立棒球場⛅ | 超級氣象局"
 })
 fieldNameText_kaohsiungFirst.addEventListener('click', () => {
     document.title="高雄立德棒球場⛅ | 超級氣象局"
 })
+fieldNameTextKaohsiungFirst.addEventListener('click', () => {
+    document.title="高雄立德棒球場⛅ | 超級氣象局"
+})
 fieldNameText_kaohsiungLake.addEventListener('click', () => {
+    document.title="澄清湖棒球場⛅ | 超級氣象局"
+})
+fieldNameTextKaohsiungLake.addEventListener('click', () => {
     document.title="澄清湖棒球場⛅ | 超級氣象局"
 })
 fieldNameText_pingtungChina.addEventListener('click', () => {
     document.title="中國信託公益園區棒球場⛅ | 超級氣象局"
 })
+fieldNameTextPingtungChina.addEventListener('click', () => {
+    document.title="中國信託公益園區棒球場⛅ | 超級氣象局"
+})
 fieldNameText_pingtungFirst.addEventListener('click', () => {
+    document.title="屏東縣立棒球場⛅ | 超級氣象局"
+})
+fieldNameTextPingtungFirst.addEventListener('click', () => {
     document.title="屏東縣立棒球場⛅ | 超級氣象局"
 })
 fieldNameText_yilan.addEventListener('click', () => {
     document.title="宜蘭羅東運動公園棒球場⛅ | 超級氣象局"
 })
+fieldNameTextYilan.addEventListener('click', () => {
+    document.title="宜蘭羅東運動公園棒球場⛅ | 超級氣象局"
+})
 fieldNameText_hualien.addEventListener('click', () => {
     document.title="花蓮縣立棒球場⛅ | 超級氣象局"
 })
+fieldNameTextHualien.addEventListener('click', () => {
+    document.title="花蓮縣立棒球場⛅ | 超級氣象局"
+})
 fieldNameText_taitung.addEventListener('click', () => {
+    document.title="臺東縣立棒球場⛅ | 超級氣象局"
+})
+fieldNameTextTaitung.addEventListener('click', () => {
     document.title="臺東縣立棒球場⛅ | 超級氣象局"
 })
