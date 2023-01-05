@@ -1,26 +1,30 @@
 body {
-	/* background-image: url("./imgs/canvas.png"); */
-	/* width: 100%;
-	height: 100%; */
 	background: linear-gradient(to bottom, #ba8585, #cc5d5d);
 	height: 100vh;
 }
 
 .header {
 	width: 90%;
-	height: 60px;
-	margin: 0 auto;
+	height: 104px;
+	margin: 0 auto 30px auto;
+	border-bottom: 1px solid #e8e8e8;
+	display: flex;
+	align-items: center;
 }
 
 .title {
 	text-align: center;
-	font-size: 2rem;
+	font-size: 3rem;
 	letter-spacing: 5px;
+	vertical-align: middle;
 }
 
 .mainContent {
 	display: flex;
-	gap: 20px;
+	justify-content: space-around;
+	/* gap: 20px; */
+	width: 90%;
+	margin: 0 auto;
 }
 
 
@@ -33,14 +37,13 @@ body {
 /* =========================== Map ================================ */
 .baseballFieldMap {
 	width: 40%;
-	/* background-color: #fff; */
 	/* height: 80vh; */
 }
 
 
 #cf503461-00bd-459a-aeb5-062ebc913211 {
 	fill: #FFBF78;
-	height: 800px;
+	height: 735px;
 	stroke: #ffffff3d;
 }
 
@@ -60,19 +63,9 @@ text {
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.17)
 }
 
-/* path:hover text {
-	display: inline-block;
-} */
-
-
 text:hover {
 	cursor: pointer;
 	/* transform: scale(1.01); */
-}
-
-[data-name="kaohsiung_city"]:hover text {
-	display: block;
-	fill: #ffffff;
 }
 
 
@@ -87,6 +80,9 @@ text:hover {
 /* =========================== temperatureCurve ================================ */
 .temperatureCurve {
 	height: calc(100vh - 60px - 430px);
+	width: 100%;
+	border-radius: 15px;
+	outline: 1px solid #cbcbcb;
 }
 
 .temperatureCurve::after {
@@ -101,7 +97,7 @@ text:hover {
 .baseballFieldMenu {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	gap: 25px;
 }
@@ -109,7 +105,7 @@ text:hover {
 .baseballField {
 	width: 20%;
 	height: 55px;
-	/* background-color: #414141; */
+	background-color: transparent;
 	text-align: center;
 	display: flex;
 	align-items: center;
@@ -117,14 +113,86 @@ text:hover {
 	outline: 1px solid #cbcbcb;
 	border-radius: 40px;
 	transition: border-radius 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-		color 0.4s
+		color 0.4s,
+		background-color 0.4s
 		/* scale 4s ease-in-out; */
+}
 
+.baseballField:nth-of-type(12),
+.baseballField:nth-of-type(14) {
+	font-size: 12px;
 }
 
 .baseballField:hover {
 	cursor: pointer;
 	border-radius: 15px;
-	color: #dddddd;
+	color: #ffffff;
+	background-color: #FEA493;
 	/* transform: scale(1.02); */
+}
+
+/* ======================= RWD ==================== */
+
+/* ============== 1535px ============ */
+@media (max-width:1535px) {
+
+	body {
+		height: 100%;
+		background: linear-gradient(to bottom, #ba8585, #cc5d5d);
+	}
+
+	.mainContent {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.baseballFieldMap {
+		width: 90%;
+		order: 2;
+		display: flex;
+		margin-top: 30px;
+		/* height: 80vh; */
+	}
+
+	#cf503461-00bd-459a-aeb5-062ebc913211 {
+		margin: 0 auto;
+		height: 900px;
+	}
+
+	.rightWrapper {
+		width: 90%;
+		order: 1
+	}
+
+	.baseballField {
+		width: 47%;
+		height: 70px;
+	}
+
+	.baseballField {
+		font-size: 24px;
+	}
+
+	.baseballField:nth-of-type(12),
+	.baseballField:nth-of-type(14) {
+		font-size: 20px;
+	}
+}
+
+/* ============== 600px ============ */
+@media (max-width:600px) {
+	.title {
+		font-size: 2rem;
+	}
+
+	.baseballField {
+		width: 100%;
+		height: 70px;
+		font-size: 2rem;
+	}
+
+	.baseballField:nth-of-type(12),
+	.baseballField:nth-of-type(14) {
+		font-size: 28px;
+	}
 }
