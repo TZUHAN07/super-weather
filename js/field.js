@@ -1,5 +1,5 @@
 let nowshowcity = ""
-
+// 取得有棒球場縣市資料
 function getfeildData(city){
     let citydetail= document.getElementById("fieldNameText_" + city)
     
@@ -8,4 +8,13 @@ function getfeildData(city){
     }
     nowshowcity=citydetail
     citydetail.style.display="block"
+}
+// 取得無棒球場縣市資料
+function noField(){
+    const nofield=document.getElementsByClassName("nofield")
+    for (let index = 0; index < nofield.length; index++) {
+        nofield[index].addEventListener("click",function(){
+            nowshowcity.style.display="none"
+        })   
+    }
 }
