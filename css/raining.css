@@ -37,20 +37,21 @@ body {
 /* =========================== Map ================================ */
 .baseballFieldMap {
 	width: 40%;
-	/* height: 80vh; */
 	position: relative;
-	height: auto;
 }
 
 .baseballFieldName {
 	position: static;
 }
 
+.baseballFieldName:hover {
+	cursor: pointer;
+}
+
 #cf503461-00bd-459a-aeb5-062ebc913211 {
 	fill: #FFBF78;
-	/* height: 800px; */
+	height: 735px;
 	stroke: #ffffff3d;
-	height: 100%;
 	width: 100%;
 }
 
@@ -68,13 +69,10 @@ text {
 	font-weight: 100;
 	stroke: #ffffff;
 	/* box-shadow: 16px 18px 22px -4px rgba(0, 0, 0, 0.39); */
-	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.17)
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.17);
+	cursor: pointer;
 }
 
-text:hover {
-	cursor: pointer;
-	/* transform: scale(1.01); */
-}
 
 
 /* =========================== Right ================================ */
