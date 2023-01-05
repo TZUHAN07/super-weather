@@ -90,10 +90,11 @@ text:hover {
 }
 
 .temperatureCurve::after {
-	content: "折線圖折線圖折線圖折線圖折線圖折線圖折線圖";
 	font-size: 90px;
 	color: #000000;
 }
+
+
 
 
 /* =========================== baseballFieldMenu ================================ */
