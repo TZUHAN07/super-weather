@@ -1,6 +1,3 @@
-import fetch from 'node-fetch'
-//apparent_temperature= AT; temperature= T; weather description= Wx;
-
 var obj={ "天母棒球場":{"士林區":"61"},
 "新莊棒球場":{"新莊區":"69"},
 "桃園國際棒球場":{"中壢區":"05"},
@@ -41,7 +38,6 @@ async function fetchWeather(api_city, region){
 		const time_on_graph= result[0]['time'][i]['startTime'].split(" ")[1].split(":").reverse().slice(1).reverse().join(":")
 		const starttime= result[0]['time'][i]['startTime'].split(" ")[1].split(":")[0]
 		const date= result[0]['time'][i]['startTime'].split(" ")[0].split("-").slice(1).join("/")
-		
 	}
 	
 }
