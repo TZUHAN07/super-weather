@@ -38,6 +38,7 @@ body {
 .baseballFieldMap {
 	width: 40%;
 	position: relative;
+	z-index: 98;
 }
 
 .baseballFieldName {
