@@ -13,7 +13,6 @@ function getfeildData(city) {
 document.querySelectorAll('.baseballField').forEach(field => {
     field.addEventListener('click', () => {
         baseball_field = field.textContent
-        console.log(field.textContent)
 
         const chooseoutside = document.querySelectorAll('.chooseoutside')
         chooseoutside.forEach(element => {
@@ -37,7 +36,6 @@ document.querySelectorAll('.baseballField').forEach(field => {
 document.querySelectorAll('.select').forEach(field => {
     field.addEventListener('click', () => {
         baseball_field = field.textContent
-        console.log(field.textContent)
 
         region = String(Object.keys(obj[baseball_field]))
         api_city = String(Object.values(obj[baseball_field]))
