@@ -63,8 +63,6 @@ async function fetchWeather(api_city, region) {
 			hourWeather.starttime.push(startTime)
 		}
 	}
-
-	console.log(hourWeather)
 	updateChartOne()
 }
 
@@ -124,7 +122,5 @@ async function weeklyWeather(api_city_week, region) {
 		weekWeather.ApLow.MinAT.push(parseInt(rawData[3]['time'][z]['elementValue'][0]['value']))
 		weekWeather.ApLow.Wx.push(rawData[1]['time'][z]['elementValue'][0]['value'])
 	}
-
-	console.log(weekWeather)
 	updateChartOne()
 }
