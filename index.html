@@ -18,28 +18,29 @@
 	<div class="mainContent">
 		<div class="baseballFieldMap">
 			<div class="baseballFieldName">
-				<div id="fieldNameText_taipei" class="baseStyle fieldNameText_taipei">天母棒球場</div>
-				<div id="fieldNameText_newtaipei" class="baseStyle fieldNameText_newtaipei">新莊棒球場</div>
-				<div id="fieldNameText_taoyuan" class="baseStyle fieldNameText_taoyuan">桃園國際棒球場</div>
-				<div id="fieldNameText_hsinchu" class="baseStyle fieldNameText_hsinchu">新竹棒球場</div>
+				<div id="fieldNameText_taipei" class="baseStyle fieldNameText_taipei select">天母棒球場</div>
+				<div id="fieldNameText_newtaipei" class="baseStyle fieldNameText_newtaipei select" >新莊棒球場</div>
+				<div id="fieldNameText_taoyuan" class="baseStyle fieldNameText_taoyuan select" >桃園國際棒球場</div>
+				<div id="fieldNameText_hsinchu" class="baseStyle fieldNameText_hsinchu select">新竹棒球場</div>
 				<div id="fieldNameText_taichung" class="fieldNameText_taichung">
-					<div id="fieldNameText_taichungFirst" class="fieldNameText_taichungFirst">臺中洲際棒球場</div>
-					<div id="fieldNameText_taichungCollege" class="fieldNameText_taichungCollege">臺中國立體大棒球場</div>
+					<div id="fieldNameText_taichungFirst" class="fieldNameText_taichungFirst select select">臺中洲際棒球場</div>
+					<div id="fieldNameText_taichungCollege" class="fieldNameText_taichungCollege select">臺中國立體大棒球場</div>
 				</div>
-				<div id="fieldNameText_yunlin" class="baseStyle fieldNameText_yunlin" >雲林斗六棒球場</div>
-				<div id="fieldNameText_chiayi" class="baseStyle fieldNameText_chiayi">嘉義市立棒球場</div>
-				<div id="fieldNameText_tainan" class="baseStyle fieldNameText_tainan">臺南市立棒球場</div>
+				<div id="fieldNameText_yunlin" class="baseStyle fieldNameText_yunlin select" >雲林斗六棒球場</div>
+				<div id="fieldNameText_chiayi" class="baseStyle fieldNameText_chiayi select">嘉義市立棒球場</div>
+				<div id="fieldNameText_tainan" class="baseStyle fieldNameText_tainan select">臺南市立棒球場</div>
 				<div id="fieldNameText_kaohsiung" class="fieldNameText_kaohsiung">
-					<div id="fieldNameText_kaohsiungFirst" class="fieldNameText_kaohsiungFirst">高雄立德棒球場</div>
-					<div id="fieldNameText_kaohsiungLake" class="fieldNameText_kaohsiungLake">澄清湖棒球場</div>
+					<div id="fieldNameText_kaohsiungFirst" class="fieldNameText_kaohsiungFirst select" >高雄立德棒球場</div>
+					<div id="fieldNameText_kaohsiungLake" class="fieldNameText_kaohsiungLake select" >澄清湖棒球場</div>
 				</div>
 				<div id="fieldNameText_pingtung" class="fieldNameText_pingtung">
-					<div id="fieldNameText_pingtungChina" class="fieldNameText_pingtungChina">中國信託公益園區棒球場</div>
-					<div id="fieldNameText_pingtungFirst" class="fieldNameText_pingtungFirst">屏東縣立棒球場</div>
+					<div id="fieldNameText_pingtungChina" class="fieldNameText_pingtungChina select" >中國信託公益園區棒球場</div>
+					<div id="fieldNameText_pingtungFirst" class="fieldNameText_pingtungFirst select" >屏東縣立棒球場</div>
 				</div>
-				<div id="fieldNameText_yilan" class="baseStyle fieldNameText_yilan">宜蘭羅東運動公園棒球場</div>
-				<div id="fieldNameText_hualien" class="baseStyle fieldNameText_hualien">花蓮縣立棒球場</div>
-				<div id="fieldNameText_taitung" class="baseStyle fieldNameText_taitung">臺東縣立棒球場</div>
+				<div id="fieldNameText_yilan" class="baseStyle fieldNameText_yilan select">宜蘭羅東運動公園棒球場</div>
+				<div id="fieldNameText_hualien" class="baseStyle fieldNameText_hualien select">花蓮縣立棒球場</div>
+				<div id="fieldNameText_taitung" class="baseStyle fieldNameText_taitung select">臺東縣立棒球場</div>
+
 			</div>
 			<svg id="cf503461-00bd-459a-aeb5-062ebc913211" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.89">
 				<defs/>
@@ -137,6 +138,10 @@
 		</div>
 		<div class="rightWrapper">
 			<div class="temperatureCurve">
+				<button id="chart-1">逐三小時預報</button>
+				<button id="chart-2">一週溫度曲線</button>
+				<button id="chart-3">一週體感溫度曲線</button>
+
 				<canvas id="myChart"></canvas>
 			</div>
 			<div class="baseballFieldMenu">
@@ -161,7 +166,7 @@
 	</div>
 	<script type="text/javascript" src="/js/map.js"></script>
 	<script type="text/javascript" src="js/field.js"></script>
-	<script src="/js/api.js"></script>
 	<script src="/js/chart.js"></script>
+	<script src="/js/api.js"></script>
 </body>
 </html>
