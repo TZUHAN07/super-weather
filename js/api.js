@@ -30,42 +30,6 @@ let hourWeather = {}
 let weekWeather = {}
 
 
-document.querySelectorAll('.baseballField').forEach(field => {
-	field.addEventListener('click', () => {
-		baseball_field = field.textContent
-		console.log(field.textContent)
-
-		region = String(Object.keys(obj[baseball_field]))
-		api_city = String(Object.values(obj[baseball_field]))
-		api_city_week = (parseInt(api_city) + 2).toLocaleString('en-US', {
-			minimumIntegerDigits: 2,
-			useGrouping: false
-		})
-
-		fetchWeather(api_city, region)
-		weeklyWeather(api_city_week, region)
-	})
-})
-
-
-document.querySelectorAll('.select').forEach(field => {
-	field.addEventListener('click', () => {
-		baseball_field = field.textContent
-		console.log(field.textContent)
-
-		region = String(Object.keys(obj[baseball_field]))
-		api_city = String(Object.values(obj[baseball_field]))
-		api_city_week = (parseInt(api_city) + 2).toLocaleString('en-US', {
-			minimumIntegerDigits: 2,
-			useGrouping: false
-		})
-
-		fetchWeather(api_city, region)
-		weeklyWeather(api_city_week, region)
-	})
-})
-
-
 //////逐3hr 
 async function fetchWeather(api_city, region) {
 	let url = `https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-0${api_city}?Authorization=CWB-72A20779-A6B1-4C04-8C3C-4E22409C9C8A&locationName=${region}&elementName=T,AT,Wx`
