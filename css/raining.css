@@ -157,7 +157,7 @@ text {
 
 	#cf503461-00bd-459a-aeb5-062ebc913211 {
 		margin: 0 auto;
-		height: 900px;
+		height: 90%;
 	}
 
 	.rightWrapper {
@@ -184,6 +184,10 @@ text {
 @media (max-width:600px) {
 	.title {
 		font-size: 2rem;
+	}
+
+	#cf503461-00bd-459a-aeb5-062ebc913211 {
+		display: none;
 	}
 
 	.baseballField {
