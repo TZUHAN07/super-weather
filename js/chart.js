@@ -11,14 +11,14 @@ Chart.defaults.plugins.legend.position = 'bottom'
 const chart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: [],
+        labels: ['1', '2', '3', '4'],
         datasets: [{
             label: '高溫(°C)',
             borderColor: 'rgb(255, 172, 28)',
             pointBackgroundColor: 'rgb(255, 172, 28)',
             backgroundColor: 'rgb(255, 172, 28)',
             borderWidth: 2,
-            data: [],
+            data: [{x: '1', y: 10}, {x: '3', y: 30}],
             tension: 0.4
         },
         {
@@ -27,7 +27,7 @@ const chart = new Chart(ctx, {
             pointBackgroundColor: 'rgb(52, 152, 219 )',
             backgroundColor: 'rgb(52, 152, 219 )',
             borderWidth: 2,
-            data: [],
+            data: [{x: '2', y: 20}, {x: '4', y: 40}],
             tension: 0.4
         }]
     },
@@ -112,16 +112,50 @@ function updateChartOne(){
 function updateChartTwo(){
     chart.data.labels = weekWeather.High.date
     chart.data.datasets = chartTwoDatasets
-    chart.data.datasets[0].data = weekWeather.High.MaxT
-    chart.data.datasets[1].data = weekWeather.Low.MinT
+
+    chart.data.datasets[0].data = []
+    let count = 0
+    for (let i = 0; i < 14; i += 2){
+        chart.data.datasets[0].data.push({
+            x: weekWeather.High.date[i],
+            y: weekWeather.High.MaxT[count++]
+        })
+    }
+
+    chart.data.datasets[1].data = []
+    count = 0
+    for (let i = 1; i < 14; i += 2){
+        chart.data.datasets[1].data.push({
+            x: weekWeather.High.date[i],
+            y: weekWeather.Low.MinT[count++]
+        })
+    }
+
     chart.update()
 }
 
 function updateChartThree(){
     chart.data.labels = weekWeather.ApHigh.date
     chart.data.datasets = chartThreeDatasets
-    chart.data.datasets[0].data = weekWeather.ApHigh.MaxAT
-    chart.data.datasets[1].data = weekWeather.ApLow.MinAT
+
+    chart.data.datasets[0].data = []
+    let count = 0
+    for (let i = 0; i < 14; i += 2){
+        chart.data.datasets[0].data.push({
+            x: weekWeather.ApHigh.date[i],
+            y: weekWeather.ApHigh.MaxAT[count++]
+        })
+    }
+
+    chart.data.datasets[1].data = []
+    count = 0
+    for (let i = 1; i < 14; i += 2){
+        chart.data.datasets[1].data.push({
+            x: weekWeather.ApHigh.date[i],
+            y: weekWeather.ApLow.MinAT[count++]
+        })
+    }
+
     chart.update()
 }
 
