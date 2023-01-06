@@ -35,7 +35,6 @@ document.querySelectorAll('.baseballField').forEach(field => {
 		baseball_field = field.textContent
 		console.log(field.textContent)
 
-
 		region = String(Object.keys(obj[baseball_field]))
 		api_city = String(Object.values(obj[baseball_field]))
 		api_city_week = (parseInt(api_city) + 2).toLocaleString('en-US', {
