@@ -101,6 +101,7 @@ async function weeklyWeather(api_city_week, region){
 	const res = await fetch(url1);
     const outcome = await res.json();
 	const rawData= outcome['records']['locations'][0]['location'][0]['weatherElement'];
+	console.log(rawData)
 
 	weekWeather = {
 		"High": {
@@ -127,11 +128,12 @@ async function weeklyWeather(api_city_week, region){
 	for (let j=1; j<14; j+=2){
 		weekWeather.High.MaxT.push(parseInt(rawData[4]['time'][j]['elementValue'][0]['value']))
 		weekWeather.High.Wx.push(rawData[1]['time'][j]['elementValue'][0]['value'])
-		weekWeather.High.date.push(rawData[1]['time'][j]['startTime'].split(" ")[0].split("-").slice(1).join("/"))
+		weekWeather.High.date.push(rawData[1]['time'][j]['startTime'].split(" ")[0].split("-").slice(1).join("/").concat("白天"))
+		weekWeather.High.date.push(rawData[1]['time'][j]['startTime'].split(" ")[0].split("-").slice(1).join("/").concat("晚上"))
 	}
 
 	//低溫 Low
-	for (let x=0; x<15; x+=2){
+	for (let x=0; x<14; x+=2){
 		weekWeather.Low.MinT.push(parseInt(rawData[2]['time'][x]['elementValue'][0]['value']))
 		weekWeather.Low.Wx.push(rawData[1]['time'][x]['elementValue'][0]['value'])
 	}
@@ -140,11 +142,12 @@ async function weeklyWeather(api_city_week, region){
 	for(let y=1; y<14; y+=2){
 		weekWeather.ApHigh.MaxAT.push(parseInt(rawData[0]['time'][y]['elementValue'][0]['value']))
 		weekWeather.ApHigh.Wx.push(rawData[1]['time'][y]['elementValue'][0]['value'])
-		weekWeather.ApHigh.date.push(rawData[1]['time'][y]['startTime'].split(" ")[0].split("-").slice(1).join("/"))
+		weekWeather.ApHigh.date.push(rawData[1]['time'][y]['startTime'].split(" ")[0].split("-").slice(1).join("/").concat("白天"))
+		weekWeather.ApHigh.date.push(rawData[1]['time'][y]['startTime'].split(" ")[0].split("-").slice(1).join("/").concat("晚上"))
 	}
 
 	//體感低溫 ApLow
-	for(let z=0; z<15; z+=2){
+	for(let z=0; z<14; z+=2){
 		weekWeather.ApLow.MinAT.push(parseInt(rawData[3]['time'][z]['elementValue'][0]['value']))
 		weekWeather.ApLow.Wx.push(rawData[1]['time'][z]['elementValue'][0]['value'])
 	}
