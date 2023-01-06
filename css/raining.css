@@ -49,7 +49,7 @@ body {
 
 #cf503461-00bd-459a-aeb5-062ebc913211 {
 	fill: #FFBF78;
-	height: 735px;
+	height: 897px;
 	stroke: #ffffff3d;
 	width: 100%;
 }
@@ -84,13 +84,43 @@ text {
 
 /* =========================== temperatureCurve ================================ */
 .temperatureCurve {
-	/* height: calc(100vh - 60px - 430px); */
 	width: 100%;
-	/* border-radius: 15px;
-	outline: 1px solid #cbcbcb; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+}
+
+.buttonContainer {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+#chart-1,
+#chart-2,
+#chart-3 {
+	width: 200px;
+	height: 50px;
+	font-size: 20px;
+	writing-mode: sideways-lr;
+	border-radius: 30px;
+	border: none;
+	color: #e9e9e9;
+	outline: 1px solid #cbcbcb;
+	background-color: #ffffff00;
+	transition: border-radius 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+		color 0.4s,
+		background-color 0.4s
+}
+
+#chart-1:hover,
+#chart-2:hover,
+#chart-3:hover {
+	cursor: pointer;
+	border-radius: 15px;
+	color: #ffffff;
+	background-color: #FEA493;
 }
 
 /* =========================== baseballFieldMenu ================================ */
