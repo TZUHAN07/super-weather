@@ -17,6 +17,7 @@
     cursor: pointer;
     background: white;
     opacity: 0.6;
+    text-align: center;
     z-index: 99;
 }
 
