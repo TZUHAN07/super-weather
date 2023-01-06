@@ -11,6 +11,12 @@
     font-size: 14px;
     background: white;
     opacity: 0.6;
+}
+
+.select {
+    cursor: pointer;
+    background: white;
+    opacity: 0.6;
     z-index: 99;
 }
 
