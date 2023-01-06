@@ -212,6 +212,18 @@ text {
 	}
 }
 
+@media (max-width:758px) {
+
+    #chart-1,
+    #chart-2,
+    #chart-3 {
+        width: 150px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+}
+
 /* ============== 600px ============ */
 @media (max-width:600px) {
 	.title {
@@ -237,4 +249,21 @@ text {
 	.baseballField:nth-of-type(14) {
 		font-size: 28px;
 	}
+
+	.buttonContainer {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #chart-1,
+    #chart-2,
+    #chart-3 {
+        width: 90%;
+        height: 30px;
+        font-size: 16px;
+    }
 }
