@@ -1,6 +1,3 @@
-import fetch from 'node-fetch'
-//apparent_temperature= AT; temperature= T; weather description= Wx;
-
 var obj={ "天母棒球場":{"士林區":"61"},
 "新莊棒球場":{"新莊區":"69"},
 "桃園國際棒球場":{"中壢區":"05"},
@@ -18,13 +15,53 @@ var obj={ "天母棒球場":{"士林區":"61"},
 "花蓮縣立棒球場":{"花蓮市":"41"},
 "臺東縣立棒球場":{"臺東市":"37"},
 }
-//select name of the baseball field
-const baseball_field= document.querySelector()
-const region=String(Object.keys(obj[baseball_field]))
-const api_city=String(Object.values(obj[baseball_field]))
-const api_city_week= (parseInt(api_city)+2).toLocaleString('en-US',{
-    minimumIntegerDigits:2,
-    useGrouping:false
+
+//set default value
+let baseball_field = "天母棒球場"
+let region = String(Object.keys(obj[baseball_field]))
+let api_city = String(Object.values(obj[baseball_field]))
+let api_city_week = (parseInt(api_city)+2).toLocaleString('en-US',{
+	minimumIntegerDigits:2,
+	useGrouping:false
+})
+
+let hourWeather = {}
+let weekWeather = {}
+
+
+document.querySelectorAll('.baseballField').forEach(field => {
+	field.addEventListener('click', () => {
+		baseball_field = field.textContent
+		console.log(field.textContent)
+
+		region = String(Object.keys(obj[baseball_field]))
+		api_city = String(Object.values(obj[baseball_field]))
+		api_city_week = (parseInt(api_city)+2).toLocaleString('en-US',{
+			minimumIntegerDigits:2,
+			useGrouping:false
+		})
+
+		fetchWeather(api_city, region)
+		weeklyWeather(api_city_week,region)
+	})
+})
+
+
+document.querySelectorAll('.select').forEach(field => {
+	field.addEventListener('click', () => {
+		baseball_field = field.textContent
+		console.log(field.textContent)
+
+		region = String(Object.keys(obj[baseball_field]))
+		api_city = String(Object.values(obj[baseball_field]))
+		api_city_week = (parseInt(api_city)+2).toLocaleString('en-US',{
+			minimumIntegerDigits:2,
+			useGrouping:false
+		})
+
+		fetchWeather(api_city, region)
+		weeklyWeather(api_city_week,region)
+	})
 })
 
 
@@ -34,18 +71,38 @@ async function fetchWeather(api_city, region){
     const response = await fetch(url);
     const ans = await response.json();
 	const result= ans['records']['locations'][0]['location'][0]['weatherElement']
-	for (let i=0; i<24; i++){
-		const AT= result[1]['time'][i]['elementValue'][0]['value']
-		const T= result[2]['time'][i]['elementValue'][0]['value']
-		const Wx=result[0]['time'][i]['elementValue'][0]['value']
-		const time_on_graph= result[0]['time'][i]['startTime'].split(" ")[1].split(":").reverse().slice(1).reverse().join(":")
-		const starttime= result[0]['time'][i]['startTime'].split(" ")[1].split(":")[0]
-		const date= result[0]['time'][i]['startTime'].split(" ")[0].split("-").slice(1).join("/")
-		
+
+	hourWeather = {
+		"AT": [],
+		"T": [],
+		"Wx": [],
+		"time_on_graph": [],
+		"starttime": [],
+		"date": []
 	}
 	
+	for (let i=0; i<24; i++){
+		hourWeather.AT.push(parseInt(result[1]['time'][i]['elementValue'][0]['value']))
+		hourWeather.T.push(parseInt(result[2]['time'][i]['elementValue'][0]['value']))
+		hourWeather.Wx.push(result[0]['time'][i]['elementValue'][0]['value'])
+		hourWeather.time_on_graph.push(result[0]['time'][i]['startTime'].split(" ")[1].split(":").reverse().slice(1).reverse().join(":"))
+
+		let date = result[0]['time'][i]['startTime'].split(" ")[0].split("-").slice(1).join("/")
+		hourWeather.date.push(date)
+
+		let startTime = result[0]['time'][i]['startTime'].split(" ")[1].split(":")[0]
+		if (startTime === '00'){
+			hourWeather.starttime.push(date.concat("(", startTime, ")"))
+		}
+		else {
+			hourWeather.starttime.push(startTime)
+		}
+	}
+
+	console.log(hourWeather)
+	updateChartOne()
 }
-fetchWeather(api_city,region)
+
 
 //////一週溫度
 async function weeklyWeather(api_city_week, region){
@@ -53,32 +110,56 @@ async function weeklyWeather(api_city_week, region){
 	const res = await fetch(url1);
     const outcome = await res.json();
 	const rawData= outcome['records']['locations'][0]['location'][0]['weatherElement'];
-	//高溫
-	for (let j=1; j<14; j+=2){
-		const MaxT= rawData[4]['time'][j]['elementValue'][0]['value'];
-		const Wx= rawData[1]['time'][j]['elementValue'][0]['value'];
-		const date= rawData[1]['time'][j]['startTime'].split(" ")[0].split("-").slice(1).join("/");
-		console.log(MaxT)
+
+	weekWeather = {
+		"High": {
+			"MaxT": [],
+			"Wx": [],
+			"date": []
+		},
+		"Low": {
+			"MinT": [],
+			"Wx": []
+		},
+		"ApHigh": {
+			"MaxAT": [],
+			"Wx": [],
+			"date": []
+		},
+		"ApLow": {
+			"MinAT": [],
+			"Wx": []
+		}
 	}
-	//低溫
-	for (let x=0; x<15; x+=2){
-		const MinT= rawData[2]['time'][x]['elementValue'][0]['value'];
-		const Wx= rawData[1]['time'][x]['elementValue'][0]['value'];
-		console.log(MinT)
+
+	//高溫 High
+	for (let j=1; j<14; j+=2){
+		weekWeather.High.MaxT.push(parseInt(rawData[4]['time'][j]['elementValue'][0]['value']))
+		weekWeather.High.Wx.push(rawData[1]['time'][j]['elementValue'][0]['value'])
+		weekWeather.High.date.push(rawData[1]['time'][j]['startTime'].split(" ")[0].split("-").slice(1).join("/").concat("白天"))
+		weekWeather.High.date.push(rawData[1]['time'][j]['startTime'].split(" ")[0].split("-").slice(1).join("/").concat("晚上"))
+	}
+
+	//低溫 Low
+	for (let x=0; x<14; x+=2){
+		weekWeather.Low.MinT.push(parseInt(rawData[2]['time'][x]['elementValue'][0]['value']))
+		weekWeather.Low.Wx.push(rawData[1]['time'][x]['elementValue'][0]['value'])
 	}
 	
-	//體感高溫
+	//體感高溫 ApHigh
 	for(let y=1; y<14; y+=2){
-		const MaxAT= rawData[0]['time'][y]['elementValue'][0]['value'];
-		const Wx= rawData[1]['time'][y]['elementValue'][0]['value'];
-		const date= rawData[1]['time'][y]['startTime'].split(" ")[0].split("-").slice(1).join("/");
-	}
-	//體感低溫
-	for(let z=0; z<15; z+=2){
-		const MinAT= rawData[3]['time'][z]['elementValue'][0]['value'];
-		const Wx= rawData[1]['time'][z]['elementValue'][0]['value'];
+		weekWeather.ApHigh.MaxAT.push(parseInt(rawData[0]['time'][y]['elementValue'][0]['value']))
+		weekWeather.ApHigh.Wx.push(rawData[1]['time'][y]['elementValue'][0]['value'])
+		weekWeather.ApHigh.date.push(rawData[1]['time'][y]['startTime'].split(" ")[0].split("-").slice(1).join("/").concat("白天"))
+		weekWeather.ApHigh.date.push(rawData[1]['time'][y]['startTime'].split(" ")[0].split("-").slice(1).join("/").concat("晚上"))
 	}
 
+	//體感低溫 ApLow
+	for(let z=0; z<14; z+=2){
+		weekWeather.ApLow.MinAT.push(parseInt(rawData[3]['time'][z]['elementValue'][0]['value']))
+		weekWeather.ApLow.Wx.push(rawData[1]['time'][z]['elementValue'][0]['value'])
+	}
 
+	console.log(weekWeather)
+	updateChartOne()
 }
-weeklyWeather(api_city_week,region)

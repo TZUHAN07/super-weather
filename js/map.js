@@ -183,3 +183,17 @@ document.querySelector('[data-name="penghu_country"]').addEventListener('mouseov
 document.querySelector('[data-name="penghu_country"]').addEventListener('mouseout', () => {
     penghu.style.display = 'none';
 });
+
+document.querySelectorAll('.select').forEach(fieldmap => {
+	fieldmap.addEventListener('click', () => {
+		baseball_field = fieldmap.textContent
+		document.title = baseball_field +"⛅ | 超級氣象局"
+	})
+})
+
+document.querySelectorAll('.baseballField').forEach(baseballieldname => {
+	baseballieldname.addEventListener('click', () => {
+		baseball_field = baseballieldname.textContent
+		document.title = baseball_field +"⛅ | 超級氣象局"
+	})
+})

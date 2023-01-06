@@ -1,4 +1,5 @@
 let nowshowcity = ""
+<<<<<<< HEAD
 // 取得有棒球場縣市資料
 function getfeildData(city){
     let citydetail= document.getElementById("fieldNameText_" + city)
@@ -18,3 +19,27 @@ function noField(){
         })   
     }
 }
+=======
+
+function getfeildData(city) {
+    let citydetail = document.getElementById("fieldNameText_" + city)
+
+    if (nowshowcity != "") {
+        nowshowcity.style.display = "none"
+    }
+    nowshowcity = citydetail
+    citydetail.style.display = "block"
+}
+
+>>>>>>> develop
+
+function getfeildData(city){
+    let citydetail= document.getElementById("fieldNameText_" + city)
+    
+    if (nowshowcity!=""){
+        nowshowcity.style.display="none"
+    }
+    nowshowcity = citydetail
+    citydetail.style.display = "block"
+}
+
