@@ -172,81 +172,26 @@
 }
 
 .fieldNameText_taitung {
-    top: 64%;
-    left: 53%;
+    top: 57%;
+    left: 42%;
 }
 
 /* ======================= RWD ==================== */
 
 /* ============== 1535px ============ */
 @media (max-width:1535px) {
-
-    .fieldNameText_taipei {
-        /* top: 10%;
-        left: 60%; */
-        transform: translateX(-50%) translateY(-50%);
+    .baseballFieldName {
+        position: absolute;
+        top: 7%;
+        left: 0;
     }
 
-    .fieldNameText_newtaipei {
-        /* top: 13%;
-        left: 57%; */
-        transform: translateX(-50%) translateY(-50%);
-    }
+    .select {
+        font-size: 28px;
 
-    .fieldNameText_hsinchu {
-        top: 15%;
-        left: 48%;
-    }
-
-    .fieldNameText_taichung {
-        /* position: relative; */
-        top: 28%;
-        left: 55%;
-    }
-
-    .fieldNameText_yunlin {
-        top: 44%;
-        left: 33%;
-
-    }
-
-    .fieldNameText_chiayi {
-        top: 52%;
-        left: 35%;
-    }
-
-    .fieldNameText_tainan {
-        top: 56%;
-        left: 44%;
-    }
-
-    .fieldNameText_kaohsiung {
-        /* position: relative; */
-        top: 62%;
-        left: 52%;
-    }
-
-    .fieldNameText_pingtung {
-        position: relative;
-        top: 75%;
-        left: 34%;
-    }
-
-    .fieldNameText_yilan {
-        top: 22%;
-        left: 52%;
-    }
-
-    .fieldNameText_hualien {
-        top: 50%;
-        left: 52%;
-    }
-
-    .fieldNameText_taitung {
-        top: 66%;
-        left: 46%;
     }
 }
+
 
 /* ============== 600px ============ */
 @media (max-width:600px) {
