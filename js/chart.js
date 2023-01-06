@@ -11,14 +11,14 @@ Chart.defaults.plugins.legend.position = 'bottom'
 const chart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['1', '2', '3', '4'],
+        labels: [],
         datasets: [{
             label: '高溫(°C)',
             borderColor: 'rgb(255, 204, 0)',
             pointBackgroundColor: 'rgb(255, 204, 0)',
             backgroundColor: 'rgb(255, 204, 0)',
             borderWidth: 2,
-            data: [{x: '1', y: 10}, {x: '3', y: 30}],
+            data: [],
             tension: 0.4
         },
         {
@@ -27,7 +27,7 @@ const chart = new Chart(ctx, {
             pointBackgroundColor: 'rgb(58, 131, 215)',
             backgroundColor: 'rgb(58, 131, 215)',
             borderWidth: 2,
-            data: [{x: '2', y: 20}, {x: '4', y: 40}],
+            data: [],
             tension: 0.4
         }]
     },
