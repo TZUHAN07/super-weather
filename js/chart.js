@@ -14,18 +14,18 @@ const chart = new Chart(ctx, {
         labels: ['1', '2', '3', '4'],
         datasets: [{
             label: '高溫(°C)',
-            borderColor: 'rgb(255, 172, 28)',
-            pointBackgroundColor: 'rgb(255, 172, 28)',
-            backgroundColor: 'rgb(255, 172, 28)',
+            borderColor: 'rgb(255, 204, 0)',
+            pointBackgroundColor: 'rgb(255, 204, 0)',
+            backgroundColor: 'rgb(255, 204, 0)',
             borderWidth: 2,
             data: [{x: '1', y: 10}, {x: '3', y: 30}],
             tension: 0.4
         },
         {
             label: '低溫(°C)',
-            borderColor: 'rgb(52, 152, 219 )',
-            pointBackgroundColor: 'rgb(52, 152, 219 )',
-            backgroundColor: 'rgb(52, 152, 219 )',
+            borderColor: 'rgb(58, 131, 215)',
+            pointBackgroundColor: 'rgb(58, 131, 215)',
+            backgroundColor: 'rgb(58, 131, 215)',
             borderWidth: 2,
             data: [{x: '2', y: 20}, {x: '4', y: 40}],
             tension: 0.4
@@ -33,7 +33,7 @@ const chart = new Chart(ctx, {
     },
     options: {
         layout: {
-            padding: 50
+            padding: 20
         }
     }
 });

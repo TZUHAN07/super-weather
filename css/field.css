@@ -1,129 +1,327 @@
-.show{
-    display:block
-}	
-.baseStyle{
-    display:none;
-    color:#6b6c6e;
-    position:absolute;
-    padding:5px;
+.show {
+    display: block
+}
+
+.baseStyle {
+    display: none;
+    color: #6b6c6e;
+    position: absolute;
+    padding: 5px;
     border-radius: 5px;
     font-size: 14px;
-    background:white;
-    opacity:0.6;
+    background: white;
+    opacity: 0.6;
 }
+
 .select {
     cursor: pointer;
+    background: white;
+    opacity: 0.6;
+    z-index: 99;
 }
-.fieldNameText_taipei{
+
+.baseStyle:hover {
+    transform: scale(1.05);
+}
+
+
+.fieldNameText_taipei {
     top: 10%;
-    left: 80%;
+    left: 74%;
 }
-.fieldNameText_newtaipei{
+
+.fieldNameText_newtaipei {
+    top: 13%;
+    left: 57%;
+}
+
+.fieldNameText_taoyuan {
+    top: 10%;
+    left: 50%;
+}
+
+.fieldNameText_hsinchu {
     top: 15%;
-    left: 75%;
+    left: 46%;
 }
 
-.fieldNameText_taoyuan{
-    top: 14%;
-    left: 65%;
-}
-.fieldNameText_hsinchu{
-    top: 18%;
-    left: 58%;
+.fieldNameText_taichung {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 60%;
 }
 
-.fieldNameText_taichung{
-    display:none;
-    position:absolute;
-    top: 36%;
-    left: 55%;
-}
-.fieldNameText_taichungFirst{
-    padding:5px;
+.fieldNameText_taichungFirst {
+    padding: 5px;
     border-radius: 5px;
     font-size: 14px;
-    opacity:0.6;
-    color:#6b6c6e;
-    background:white;
-    margin-bottom:5px;
+    opacity: 0.6;
+    color: #6b6c6e;
+    background: white;
+    margin-bottom: 5px;
+    text-align: center;
 }
-.fieldNameText_taichungCollege{
-    padding:5px;
+
+.fieldNameText_taichungCollege {
+    padding: 5px;
     border-radius: 5px;
     font-size: 14px;
-    opacity:0.6;
-    color:#6b6c6e;
-    background:white;
+    opacity: 0.6;
+    color: #6b6c6e;
+    background: white;
+    top: 246px;
+    left: 349px;
 }
-.fieldNameText_yunlin{
-    top: 46%;
-    left: 40%;
+
+.fieldNameText_taichungCollege:hover,
+.fieldNameText_taichungFirst:hover {
+    transform: scale(1.05);
 }
-.fieldNameText_chiayi{
-    top: 52%;
-    left: 40%;
+
+.fieldNameText_yunlin {
+    top: 42%;
+    left: 25%;
+
 }
-.fieldNameText_tainan{
-    top: 62%;
-    left: 40%;
+
+.fieldNameText_chiayi {
+    top: 48%;
+    left: 307px;
 }
-.fieldNameText_kaohsiung{
-    display:none;
-    position:absolute;
-    top: 68%;
+
+.fieldNameText_tainan {
+    top: 56%;
     left: 44%;
 }
-.fieldNameText_kaohsiungFirst{
-    padding:5px;
+
+.fieldNameText_kaohsiung {
+    display: none;
+    position: absolute;
+    top: 62%;
+    left: 53%;
+}
+
+.fieldNameText_kaohsiungFirst {
+    padding: 5px;
     border-radius: 5px;
     font-size: 14px;
-    opacity:0.6;
-    color:#6b6c6e;
-    background:white;
-    margin-bottom:5px;
+    opacity: 0.6;
+    color: #6b6c6e;
+    background: white;
+    margin-bottom: 5px;
 }
-.fieldNameText_kaohsiungLake{
-    padding:5px;
+
+.fieldNameText_kaohsiungLake {
+    padding: 5px;
     border-radius: 5px;
     font-size: 14px;
-    opacity:0.6;
-    color:#6b6c6e;
-    background:white;
+    opacity: 0.6;
+    color: #6b6c6e;
+    background: white;
+    top: 470px;
+    left: 331px;
 }
-.fieldNameText_pingtung{
-    display:none;
-    position:absolute;
-    top: 78%;
+
+.fieldNameText_kaohsiungFirst:hover,
+.fieldNameText_kaohsiungLake:hover {
+    transform: scale(1.05);
+}
+
+.fieldNameText_pingtung {
+    display: none;
+    position: absolute;
+    top: 75%;
+    left: 23%;
+}
+
+.fieldNameText_pingtungFirst {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0.6;
+    background: white;
+    color: #6b6c6e;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.fieldNameText_pingtungChina {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0.6;
+    background: white;
+    color: #6b6c6e;
+
+}
+
+.fieldNameText_pingtungFirst:hover,
+.fieldNameText_pingtungChina:hover {
+    transform: scale(1.05)
+}
+
+.fieldNameText_yilan {
+    top: 22%;
     left: 48%;
 }
-.fieldNameText_pingtungFirst{
-    padding:5px;
-    border-radius: 5px;
-    font-size: 14px;
-    opacity:0.6;
-    background:white;
-    color:#6b6c6e;
-    margin-top:5px;
+
+.fieldNameText_hualien {
+    top: 53%;
+    left: 50%;
 }
-.fieldNameText_pingtungChina{
-    padding:5px;
-    border-radius: 5px;
-    font-size: 14px;
-    opacity:0.6;
-    background:white;
-    color:#6b6c6e;
-   
-}
-.fieldNameText_yilan{
-    top: 25%;
-    left: 78%;
-}
-.fieldNameText_hualien{
-    top: 50%;
-    left: 70%;
-}
-.fieldNameText_taitung{
-    top: 65%;
+
+.fieldNameText_taitung {
+    top: 72%;
     left: 60%;
-    
+}
+
+/* ======================= RWD ==================== */
+
+/* ============== 1535px ============ */
+@media (max-width:1535px) {
+
+    .fieldNameText_taipei {
+        /* top: 10%;
+        left: 60%; */
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .fieldNameText_newtaipei {
+        /* top: 13%;
+        left: 57%; */
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .fieldNameText_hsinchu {
+        top: 15%;
+        left: 48%;
+    }
+
+    .fieldNameText_taichung {
+        /* position: relative; */
+        top: 28%;
+        left: 55%;
+    }
+
+    .fieldNameText_yunlin {
+        top: 44%;
+        left: 33%;
+
+    }
+
+    .fieldNameText_chiayi {
+        top: 52%;
+        left: 35%;
+    }
+
+    .fieldNameText_tainan {
+        top: 56%;
+        left: 44%;
+    }
+
+    .fieldNameText_kaohsiung {
+        /* position: relative; */
+        top: 62%;
+        left: 52%;
+    }
+
+    .fieldNameText_pingtung {
+        position: relative;
+        top: 75%;
+        left: 34%;
+    }
+
+    .fieldNameText_yilan {
+        top: 22%;
+        left: 52%;
+    }
+
+    .fieldNameText_hualien {
+        top: 50%;
+        left: 52%;
+    }
+
+    .fieldNameText_taitung {
+        top: 66%;
+        left: 46%;
+    }
+}
+
+/* ============== 600px ============ */
+@media (max-width:600px) {
+    .baseStyle {
+        display: none;
+    }
+
+    .fieldNameText_taichung {
+        display: none;
+    }
+
+    .fieldNameText_kaohsiung {
+        display: none;
+    }
+
+    /* .fieldNameText_taipei {
+        top: 20%;
+        left: 60%;
+    }
+
+    .fieldNameText_newtaipei {
+        font-size: 28px;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -10)
+    }
+
+    .fieldNameText_hsinchu {
+        top: 25%;
+        left: 40%;
+    }
+
+    .fieldNameText_taichung {
+        top: 33%;
+        left: 57%;
+    }
+
+    .fieldNameText_yunlin {
+        top: 44%;
+        left: 33%;
+
+    }
+
+    .fieldNameText_chiayi {
+        top: 52%;
+        left: 15%;
+    }
+
+    .fieldNameText_tainan {
+        top: 56%;
+        left: 44%;
+    }
+
+    .fieldNameText_kaohsiung {
+        top: 62%;
+        left: 52%;
+    }
+
+    .fieldNameText_pingtung {
+        top: 75%;
+        left: 15%;
+    }
+
+    .fieldNameText_yilan {
+        top: 22%;
+        left: 52%;
+    }
+
+    .fieldNameText_hualien {
+        top: 50%;
+        left: 52%;
+    }
+
+    .fieldNameText_taitung {
+        top: 56%;
+        left: 42%;
+    } */
 }
