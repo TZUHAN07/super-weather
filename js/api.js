@@ -88,8 +88,17 @@ async function fetchWeather(api_city, region) {
 		hourWeather.T.push(parseInt(result[2]['time'][i]['elementValue'][0]['value']))
 		hourWeather.Wx.push(result[0]['time'][i]['elementValue'][0]['value'])
 		hourWeather.time_on_graph.push(result[0]['time'][i]['startTime'].split(" ")[1].split(":").reverse().slice(1).reverse().join(":"))
-		hourWeather.starttime.push(result[0]['time'][i]['startTime'].split(" ")[1].split(":")[0])
-		hourWeather.date.push(result[0]['time'][i]['startTime'].split(" ")[0].split("-").slice(1).join("/"))
+
+		let date = result[0]['time'][i]['startTime'].split(" ")[0].split("-").slice(1).join("/")
+		hourWeather.date.push(date)
+
+		let startTime = result[0]['time'][i]['startTime'].split(" ")[1].split(":")[0]
+		if (startTime === '00') {
+			hourWeather.starttime.push(date.concat("(", startTime, ")"))
+		}
+		else {
+			hourWeather.starttime.push(startTime)
+		}
 	}
 
 	console.log(hourWeather)
@@ -129,11 +138,12 @@ async function weeklyWeather(api_city_week, region) {
 	for (let j = 1; j < 14; j += 2) {
 		weekWeather.High.MaxT.push(parseInt(rawData[4]['time'][j]['elementValue'][0]['value']))
 		weekWeather.High.Wx.push(rawData[1]['time'][j]['elementValue'][0]['value'])
-		weekWeather.High.date.push(rawData[1]['time'][j]['startTime'].split(" ")[0].split("-").slice(1).join("/"))
+		weekWeather.High.date.push(rawData[1]['time'][j]['startTime'].split(" ")[0].split("-").slice(1).join("/").concat("白天"))
+		weekWeather.High.date.push(rawData[1]['time'][j]['startTime'].split(" ")[0].split("-").slice(1).join("/").concat("晚上"))
 	}
 
 	//低溫 Low
-	for (let x = 0; x < 15; x += 2) {
+	for (let x = 0; x < 14; x += 2) {
 		weekWeather.Low.MinT.push(parseInt(rawData[2]['time'][x]['elementValue'][0]['value']))
 		weekWeather.Low.Wx.push(rawData[1]['time'][x]['elementValue'][0]['value'])
 	}
@@ -142,11 +152,12 @@ async function weeklyWeather(api_city_week, region) {
 	for (let y = 1; y < 14; y += 2) {
 		weekWeather.ApHigh.MaxAT.push(parseInt(rawData[0]['time'][y]['elementValue'][0]['value']))
 		weekWeather.ApHigh.Wx.push(rawData[1]['time'][y]['elementValue'][0]['value'])
-		weekWeather.ApHigh.date.push(rawData[1]['time'][y]['startTime'].split(" ")[0].split("-").slice(1).join("/"))
+		weekWeather.ApHigh.date.push(rawData[1]['time'][y]['startTime'].split(" ")[0].split("-").slice(1).join("/").concat("白天"))
+		weekWeather.ApHigh.date.push(rawData[1]['time'][y]['startTime'].split(" ")[0].split("-").slice(1).join("/").concat("晚上"))
 	}
 
 	//體感低溫 ApLow
-	for (let z = 0; z < 15; z += 2) {
+	for (let z = 0; z < 14; z += 2) {
 		weekWeather.ApLow.MinAT.push(parseInt(rawData[3]['time'][z]['elementValue'][0]['value']))
 		weekWeather.ApLow.Wx.push(rawData[1]['time'][z]['elementValue'][0]['value'])
 	}

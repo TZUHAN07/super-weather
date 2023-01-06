@@ -112,16 +112,50 @@ function updateChartOne(){
 function updateChartTwo(){
     chart.data.labels = weekWeather.High.date
     chart.data.datasets = chartTwoDatasets
-    chart.data.datasets[0].data = weekWeather.High.MaxT
-    chart.data.datasets[1].data = weekWeather.Low.MinT
+
+    chart.data.datasets[0].data = []
+    let count = 0
+    for (let i = 0; i < 14; i += 2){
+        chart.data.datasets[0].data.push({
+            x: weekWeather.High.date[i],
+            y: weekWeather.High.MaxT[count++]
+        })
+    }
+
+    chart.data.datasets[1].data = []
+    count = 0
+    for (let i = 1; i < 14; i += 2){
+        chart.data.datasets[1].data.push({
+            x: weekWeather.High.date[i],
+            y: weekWeather.Low.MinT[count++]
+        })
+    }
+
     chart.update()
 }
 
 function updateChartThree(){
     chart.data.labels = weekWeather.ApHigh.date
     chart.data.datasets = chartThreeDatasets
-    chart.data.datasets[0].data = weekWeather.ApHigh.MaxAT
-    chart.data.datasets[1].data = weekWeather.ApLow.MinAT
+
+    chart.data.datasets[0].data = []
+    let count = 0
+    for (let i = 0; i < 14; i += 2){
+        chart.data.datasets[0].data.push({
+            x: weekWeather.ApHigh.date[i],
+            y: weekWeather.ApHigh.MaxAT[count++]
+        })
+    }
+
+    chart.data.datasets[1].data = []
+    count = 0
+    for (let i = 1; i < 14; i += 2){
+        chart.data.datasets[1].data.push({
+            x: weekWeather.ApHigh.date[i],
+            y: weekWeather.ApLow.MinAT[count++]
+        })
+    }
+
     chart.update()
 }
 
