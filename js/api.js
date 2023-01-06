@@ -86,8 +86,17 @@ async function fetchWeather(api_city, region){
 		hourWeather.T.push(parseInt(result[2]['time'][i]['elementValue'][0]['value']))
 		hourWeather.Wx.push(result[0]['time'][i]['elementValue'][0]['value'])
 		hourWeather.time_on_graph.push(result[0]['time'][i]['startTime'].split(" ")[1].split(":").reverse().slice(1).reverse().join(":"))
-		hourWeather.starttime.push(result[0]['time'][i]['startTime'].split(" ")[1].split(":")[0])
-		hourWeather.date.push(result[0]['time'][i]['startTime'].split(" ")[0].split("-").slice(1).join("/"))
+
+		let date = result[0]['time'][i]['startTime'].split(" ")[0].split("-").slice(1).join("/")
+		hourWeather.date.push(date)
+
+		let startTime = result[0]['time'][i]['startTime'].split(" ")[1].split(":")[0]
+		if (startTime === '00'){
+			hourWeather.starttime.push(date.concat("(", startTime, ")"))
+		}
+		else {
+			hourWeather.starttime.push(startTime)
+		}
 	}
 
 	console.log(hourWeather)
@@ -101,7 +110,6 @@ async function weeklyWeather(api_city_week, region){
 	const res = await fetch(url1);
     const outcome = await res.json();
 	const rawData= outcome['records']['locations'][0]['location'][0]['weatherElement'];
-	console.log(rawData)
 
 	weekWeather = {
 		"High": {
