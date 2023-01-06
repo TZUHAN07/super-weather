@@ -1,0 +1,272 @@
+.show {
+    display: block
+}
+
+.baseStyle {
+    display: none;
+    color: #6b6c6e;
+    position: absolute;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    background: white;
+    opacity: 0.6;
+}
+
+.select {
+    cursor: pointer;
+    background: white;
+    opacity: 0.6;
+    z-index: 99;
+}
+
+.baseStyle:hover {
+    transform: scale(1.05);
+}
+
+
+.fieldNameText_taipei {
+    top: 8%;
+    left: 62%;
+}
+
+.fieldNameText_newtaipei {
+    top: 10%;
+    left: 58%;
+}
+
+.fieldNameText_taoyuan {
+    top: 9%;
+    left: 46%;
+}
+
+.fieldNameText_hsinchu {
+    top: 15%;
+    left: 46%;
+}
+
+.fieldNameText_taichung {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 60%;
+}
+
+.fieldNameText_taichungFirst {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0.6;
+    color: #6b6c6e;
+    background: white;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.fieldNameText_taichungCollege {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0.6;
+    color: #6b6c6e;
+    background: white;
+    top: 246px;
+    left: 349px;
+}
+
+.fieldNameText_taichungCollege:hover,
+.fieldNameText_taichungFirst:hover {
+    transform: scale(1.05);
+}
+
+.fieldNameText_yunlin {
+    top: 39%;
+    left: 23%;
+
+}
+
+.fieldNameText_chiayi {
+    top: 43%;
+    left: 22%;
+}
+
+.fieldNameText_tainan {
+    top: 52%;
+    left: 22%;
+}
+
+.fieldNameText_kaohsiung {
+    display: none;
+    position: absolute;
+    top: 55%;
+    left: 28%;
+}
+
+.fieldNameText_kaohsiungFirst {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0.6;
+    color: #6b6c6e;
+    background: white;
+    margin-bottom: 5px;
+}
+
+.fieldNameText_kaohsiungLake {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0.6;
+    color: #6b6c6e;
+    background: white;
+    top: 470px;
+    left: 331px;
+}
+
+.fieldNameText_kaohsiungFirst:hover,
+.fieldNameText_kaohsiungLake:hover {
+    transform: scale(1.05);
+}
+
+.fieldNameText_pingtung {
+    display: none;
+    position: absolute;
+    top: 63%;
+    left: 22%;
+}
+
+.fieldNameText_pingtungFirst {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0.6;
+    background: white;
+    color: #6b6c6e;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.fieldNameText_pingtungChina {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0.6;
+    background: white;
+    color: #6b6c6e;
+
+}
+
+.fieldNameText_pingtungFirst:hover,
+.fieldNameText_pingtungChina:hover {
+    transform: scale(1.05)
+}
+
+.fieldNameText_yilan {
+    top: 21%;
+    left: 49%;
+}
+
+.fieldNameText_hualien {
+    top: 44%;
+    left: 50%;
+}
+
+.fieldNameText_taitung {
+    top: 57%;
+    left: 42%;
+}
+
+/* ======================= RWD ==================== */
+
+/* ============== 1535px ============ */
+@media (max-width:1535px) {
+    .baseballFieldName {
+        position: absolute;
+        top: 7%;
+        left: 0;
+    }
+
+    .select {
+        font-size: 28px;
+
+    }
+}
+
+
+/* ============== 600px ============ */
+@media (max-width:600px) {
+    .baseStyle {
+        display: none;
+    }
+
+    .fieldNameText_taichung {
+        display: none;
+    }
+
+    .fieldNameText_kaohsiung {
+        display: none;
+    }
+
+    /* .fieldNameText_taipei {
+        top: 20%;
+        left: 60%;
+    }
+
+    .fieldNameText_newtaipei {
+        font-size: 28px;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -10)
+    }
+
+    .fieldNameText_hsinchu {
+        top: 25%;
+        left: 40%;
+    }
+
+    .fieldNameText_taichung {
+        top: 33%;
+        left: 57%;
+    }
+
+    .fieldNameText_yunlin {
+        top: 44%;
+        left: 33%;
+
+    }
+
+    .fieldNameText_chiayi {
+        top: 52%;
+        left: 15%;
+    }
+
+    .fieldNameText_tainan {
+        top: 56%;
+        left: 44%;
+    }
+
+    .fieldNameText_kaohsiung {
+        top: 62%;
+        left: 52%;
+    }
+
+    .fieldNameText_pingtung {
+        top: 75%;
+        left: 15%;
+    }
+
+    .fieldNameText_yilan {
+        top: 22%;
+        left: 52%;
+    }
+
+    .fieldNameText_hualien {
+        top: 50%;
+        left: 52%;
+    }
+
+    .fieldNameText_taitung {
+        top: 56%;
+        left: 42%;
+    } */
+}

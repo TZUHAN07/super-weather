@@ -1,7 +1,240 @@
-#raining{}
-#raining>.location{
-	border-bottom:1px solid #000000;
+body {
+	background: linear-gradient(to bottom, #ba8585, #cc5d5d);
+	height: 100vh;
 }
-#raining>.location>.town{
-	font-weight:bold;
+
+.header {
+	width: 90%;
+	height: 104px;
+	margin: 0 auto 30px auto;
+	border-bottom: 1px solid #e8e8e8;
+	display: flex;
+	align-items: center;
+}
+
+.title {
+	text-align: center;
+	font-size: 3rem;
+	letter-spacing: 5px;
+	vertical-align: middle;
+}
+
+.mainContent {
+	display: flex;
+	justify-content: space-around;
+	/* gap: 20px; */
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+.title {
+	margin: 0 auto;
+}
+
+/* =========================== Map ================================ */
+.baseballFieldMap {
+	width: 40%;
+	position: relative;
+	z-index: 98;
+}
+
+.baseballFieldName {
+	position: static;
+}
+
+.baseballFieldName:hover {
+	cursor: pointer;
+}
+
+#cf503461-00bd-459a-aeb5-062ebc913211 {
+	fill: #FFBF78;
+	height: 780px;
+	width: 691.2px;
+	stroke: #ffffff3d;
+	width: 100%;
+}
+
+
+path:hover {
+	fill: #FEA493;
+	cursor: pointer;
+	transform: scale(1.005);
+
+}
+
+text {
+	display: none;
+	font-size: 16px;
+	font-weight: 100;
+	stroke: #ffffff;
+	/* box-shadow: 16px 18px 22px -4px rgba(0, 0, 0, 0.39); */
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.17);
+	cursor: pointer;
+}
+
+
+
+/* =========================== Right ================================ */
+.rightWrapper {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+/* =========================== temperatureCurve ================================ */
+.temperatureCurve {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.buttonContainer {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+#chart-1,
+#chart-2,
+#chart-3 {
+	width: 200px;
+	height: 50px;
+	font-size: 20px;
+	writing-mode: sideways-lr;
+	border-radius: 30px;
+	border: none;
+	color: #e9e9e9;
+	outline: 1px solid #cbcbcb;
+	background-color: #ffffff00;
+	transition: border-radius 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+		color 0.4s,
+		background-color 0.4s
+}
+
+#chart-1:hover,
+#chart-2:hover,
+#chart-3:hover {
+	cursor: pointer;
+	border-radius: 15px;
+	color: #ffffff;
+	background-color: #FEA493;
+}
+
+/* =========================== baseballFieldMenu ================================ */
+
+.baseballFieldMenu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 25px;
+}
+
+.baseballField {
+	width: 20%;
+	height: 55px;
+	background-color: transparent;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	outline: 1px solid #cbcbcb;
+	border-radius: 40px;
+	transition: border-radius 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+		color 0.4s,
+		background-color 0.4s
+		/* scale 4s ease-in-out; */
+}
+
+.baseballField:nth-of-type(12),
+.baseballField:nth-of-type(14) {
+	font-size: 14px;
+}
+
+.baseballField:hover {
+	cursor: pointer;
+	border-radius: 15px;
+	color: #ffffff;
+	background-color: #FEA493;
+	/* transform: scale(1.02); */
+}
+
+/* ======================= RWD ==================== */
+
+/* ============== 1535px ============ */
+@media (max-width:1535px) {
+
+	body {
+		height: 100%;
+		background: linear-gradient(to bottom, #ba8585, #cc5d5d);
+	}
+
+	.mainContent {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.baseballFieldMap {
+		width: 90%;
+		order: 2;
+		display: flex;
+		margin-top: 30px;
+		/* height: 80vh; */
+		display: flex;
+	}
+
+	#cf503461-00bd-459a-aeb5-062ebc913211 {
+		margin: 0 auto;
+		height: 90%;
+	}
+
+	.rightWrapper {
+		width: 90%;
+		order: 1
+	}
+
+	.baseballField {
+		width: 47%;
+		height: 70px;
+	}
+
+	.baseballField {
+		font-size: 24px;
+	}
+
+	.baseballField:nth-of-type(12),
+	.baseballField:nth-of-type(14) {
+		font-size: 20px;
+	}
+}
+
+/* ============== 600px ============ */
+@media (max-width:600px) {
+	.title {
+		font-size: 2rem;
+	}
+
+	.baseballFieldMap {
+		display: none;
+	}
+
+	#cf503461-00bd-459a-aeb5-062ebc913211 {
+		display: none;
+	}
+
+	.baseballField {
+		width: 100%;
+		height: 70px;
+		font-size: 2rem;
+		margin-bottom: 30px;
+	}
+
+	.baseballField:nth-of-type(12),
+	.baseballField:nth-of-type(14) {
+		font-size: 28px;
+	}
 }
