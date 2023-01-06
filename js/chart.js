@@ -38,6 +38,24 @@ const chart = new Chart(ctx, {
     }
 });
 
+// Create a condition that targets viewports at least 768px wide
+const mediaQuery = window.matchMedia('(min-width: 360px) and (max-width: 600px)')
+ 
+function handleTabletChange(e) {
+  // Check if the media query is true
+  if (e.matches) {
+    chart.options.aspectRatio = 1
+  }
+  else {
+    chart.options.aspectRatio = "auto"
+  }
+}
+
+mediaQuery.addListener(handleTabletChange)
+
+handleTabletChange(mediaQuery)
+
+
 const chartOneDatasets = [
     {
         label: '溫度(°C)',
