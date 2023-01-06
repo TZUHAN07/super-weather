@@ -184,10 +184,12 @@ document.querySelector('[data-name="penghu_country"]').addEventListener('mouseou
     penghu.style.display = 'none';
 });
 
+const title = document.querySelector('.title')
 document.querySelectorAll('.select').forEach(fieldmap => {
 	fieldmap.addEventListener('click', () => {
 		baseball_field = fieldmap.textContent
 		document.title = baseball_field +"⛅ | 超級氣象局"
+        title.textContent = baseball_field
 	})
 })
 
@@ -195,5 +197,6 @@ document.querySelectorAll('.baseballField').forEach(baseballieldname => {
 	baseballieldname.addEventListener('click', () => {
 		baseball_field = baseballieldname.textContent
 		document.title = baseball_field +"⛅ | 超級氣象局"
+        title.textContent = baseball_field
 	})
 })
