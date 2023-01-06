@@ -26,18 +26,18 @@
 
 
 .fieldNameText_taipei {
-    top: 10%;
-    left: 74%;
+    top: 8%;
+    left: 62%;
 }
 
 .fieldNameText_newtaipei {
-    top: 13%;
-    left: 57%;
+    top: 10%;
+    left: 58%;
 }
 
 .fieldNameText_taoyuan {
-    top: 10%;
-    left: 50%;
+    top: 9%;
+    left: 46%;
 }
 
 .fieldNameText_hsinchu {
@@ -80,26 +80,26 @@
 }
 
 .fieldNameText_yunlin {
-    top: 42%;
-    left: 25%;
+    top: 39%;
+    left: 23%;
 
 }
 
 .fieldNameText_chiayi {
-    top: 48%;
-    left: 307px;
+    top: 43%;
+    left: 22%;
 }
 
 .fieldNameText_tainan {
-    top: 56%;
-    left: 44%;
+    top: 52%;
+    left: 22%;
 }
 
 .fieldNameText_kaohsiung {
     display: none;
     position: absolute;
-    top: 62%;
-    left: 53%;
+    top: 55%;
+    left: 28%;
 }
 
 .fieldNameText_kaohsiungFirst {
@@ -131,8 +131,8 @@
 .fieldNameText_pingtung {
     display: none;
     position: absolute;
-    top: 75%;
-    left: 23%;
+    top: 63%;
+    left: 22%;
 }
 
 .fieldNameText_pingtungFirst {
@@ -162,18 +162,18 @@
 }
 
 .fieldNameText_yilan {
-    top: 22%;
-    left: 48%;
+    top: 21%;
+    left: 49%;
 }
 
 .fieldNameText_hualien {
-    top: 53%;
+    top: 44%;
     left: 50%;
 }
 
 .fieldNameText_taitung {
-    top: 72%;
-    left: 60%;
+    top: 64%;
+    left: 53%;
 }
 
 /* ======================= RWD ==================== */
