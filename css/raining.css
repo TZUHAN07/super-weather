@@ -1,6 +1,7 @@
 body {
-	background: linear-gradient(to bottom, #ba8585, #cc5d5d);
-	height: 100vh;
+    background: linear-gradient(to bottom, #ba8585, #cc5d5d);
+    /* height: 100vh; */
+    padding-bottom: 63px;
 }
 
 .header {
